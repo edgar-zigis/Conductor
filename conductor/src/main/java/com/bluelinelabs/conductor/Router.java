@@ -4,9 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.UiThread;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.UiThread;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -139,6 +139,9 @@ public abstract class Router {
             RouterTransaction removedTransaction = null;
             RouterTransaction nextTransaction = null;
             Iterator<RouterTransaction> iterator = backstack.iterator();
+            ControllerChangeHandler topPushHandler = topTransaction != null ? topTransaction.pushChangeHandler() : null;
+            final boolean needsNextTransactionAttach = topPushHandler != null ? !topPushHandler.removesFromViewOnPush() : false;
+
             while (iterator.hasNext()) {
                 RouterTransaction transaction = iterator.next();
                 if (transaction.controller == controller) {
@@ -148,7 +151,7 @@ public abstract class Router {
                     iterator.remove();
                     removedTransaction = transaction;
                 } else if (removedTransaction != null) {
-                    if (!transaction.controller.isAttached()) {
+                    if (needsNextTransactionAttach && !transaction.controller.isAttached()) {
                         nextTransaction = transaction;
                     }
                     break;
@@ -802,13 +805,15 @@ public abstract class Router {
             // If the change handler will remove the from view, we have to make sure the container is fully attached first so we avoid NPEs
             // within ViewGroup (details on issue #287). Post this to the container to ensure the attach is complete before we try to remove
             // anything.
-            pendingControllerChanges.add(transaction);
-            container.post(new Runnable() {
-                @Override
-                public void run() {
-                    performPendingControllerChanges();
-                }
-            });
+            if (container != null) {
+                pendingControllerChanges.add(transaction);
+                container.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        performPendingControllerChanges();
+                    }
+                });
+            }
         } else {
             ControllerChangeHandler.executeChange(transaction);
         }
