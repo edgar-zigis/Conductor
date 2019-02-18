@@ -805,13 +805,15 @@ public abstract class Router {
             // If the change handler will remove the from view, we have to make sure the container is fully attached first so we avoid NPEs
             // within ViewGroup (details on issue #287). Post this to the container to ensure the attach is complete before we try to remove
             // anything.
-            pendingControllerChanges.add(transaction);
-            container.post(new Runnable() {
-                @Override
-                public void run() {
-                    performPendingControllerChanges();
-                }
-            });
+            if (container != null) {
+                pendingControllerChanges.add(transaction);
+                container.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        performPendingControllerChanges();
+                    }
+                });
+            }
         } else {
             ControllerChangeHandler.executeChange(transaction);
         }

@@ -102,7 +102,9 @@ public class ActivityHostedRouter extends Router {
 
     @Override
     void unregisterForActivityResults(@NonNull String instanceId) {
-        lifecycleHandler.unregisterForActivityResults(instanceId);
+        if (lifecycleHandler != null) {
+            lifecycleHandler.unregisterForActivityResults(instanceId);
+        }
     }
 
     @Override
