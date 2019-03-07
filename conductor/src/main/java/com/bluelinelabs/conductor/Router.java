@@ -4,9 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.UiThread;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -25,6 +22,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.UiThread;
 
 /**
  * A Router implements navigation and backstack handling for {@link Controller}s. Router objects are attached
@@ -493,7 +494,13 @@ public abstract class Router {
         // set the backstack to prevent the possibility that they'll be destroyed before the controller
         // change handler runs.
         for (RouterTransaction removedTransaction : transactionsToBeRemoved) {
-            removedTransaction.controller.destroy();
+
+            // Still need to ensure the controller isn't queued up to be removed later on.
+            for (ChangeTransaction pendingTransaction : pendingControllerChanges) {
+                if (pendingTransaction.from != removedTransaction.controller) {
+                    removedTransaction.controller.destroy();
+                }
+            }
         }
     }
 
