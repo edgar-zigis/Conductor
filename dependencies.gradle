@@ -42,6 +42,7 @@ ext {
 
     archComponentsLifecycle = "androidx.lifecycle:lifecycle-runtime:$archComponentsVersion"
     archComponentsLiveDataCore = "androidx.lifecycle:lifecycle-livedata-core:$archComponentsVersion"
+    archComponentsLifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel:$archComponentsVersion"
 
     junit = "junit:junit:$junitVersion"
     roboelectric = "org.robolectric:robolectric:$roboelectricVersion"
