@@ -350,6 +350,13 @@ public abstract class Controller {
     }
 
     /**
+     * Returns Controllers view state
+     */
+    public final Bundle getViewState() {
+        return viewState;
+    }
+
+    /**
      * Returns all of this Controller's child Routers
      */
     @NonNull
