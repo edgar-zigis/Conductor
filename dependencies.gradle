@@ -2,13 +2,9 @@ ext {
     minSdkVersion = 16
     compileSdkVersion = 28
     targetSdkVersion = 28
-
-    butterknifeVersion = '9.0.0-rc1'
-    picassoVersion = '2.5.2'
+    
     leakCanaryVersion = '1.5.4'
-    rxJavaVersion = '1.3.8'
     rxJava2Version = '2.1.14'
-    rxLifecycleVersion = '1.0'
     rxLifecycle2Version = '2.2.1'
     autodisposeVersion = '1.0.0'
     archComponentsVersion = '2.0.0'
@@ -20,20 +16,10 @@ ext {
     androidxAnnotations = "androidx.annotation:annotation:1.0.0"
     androidxAppCompat = "androidx.appcompat:appcompat:1.0.0"
 
-    butterknife = "com.jakewharton:butterknife:$butterknifeVersion"
-    butterknifeCompiler = "com.jakewharton:butterknife-compiler:$butterknifeVersion"
-
-    picasso = "com.squareup.picasso:picasso:$picassoVersion"
-
     leakCanary = "com.squareup.leakcanary:leakcanary-android:$leakCanaryVersion"
     leakCanaryNoOp = "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanaryVersion"
-
-    rxJava = "io.reactivex:rxjava:$rxJavaVersion"
+    
     rxJava2 = "io.reactivex.rxjava2:rxjava:$rxJava2Version"
-
-    rxLifecycle = "com.trello:rxlifecycle:$rxLifecycleVersion"
-    rxLifecycleAndroid = "com.trello:rxlifecycle-android:$rxLifecycleVersion"
-
     rxLifecycle2 = "com.trello.rxlifecycle2:rxlifecycle:$rxLifecycle2Version"
     rxLifecycleAndroid2 = "com.trello.rxlifecycle2:rxlifecycle-android:$rxLifecycle2Version"
 
