@@ -46,4 +46,7 @@ public abstract class LifecycleController extends Controller implements Lifecycl
         return lifecycleOwner.getLifecycle();
     }
 
+    public ControllerLifecycleOwner getLifecycleOwner() {
+        return lifecycleOwner;
+    }
 }
