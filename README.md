@@ -4,6 +4,12 @@
 This is a modification of the popular navigation library designed 
 to support Android Lifecycle Components.
 ```
+### Differences
+
+* This fork fully supports Android Lifecycle Components and is up and running in the production of a few popular applications.
+* Unlike the original library, this fork correctly supports Google Maps.
+* Some critical bugs regarding Activity lifecycle were fixed (like host router nullablity issues, lost backstack etc.)
+* This library version is lighter and legacy functionality like support of RxJava1 was removed.
 
 ## License
 ```
