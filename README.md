@@ -1,7 +1,8 @@
 # Conductor
 
 ```
-This is a modification of the popular navigation library designed to support Android Lifecycle Components.
+This is a modification of the popular navigation library designed 
+to support Android Lifecycle Components.
 ```
 
 ## License
