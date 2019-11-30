@@ -1,8 +1,8 @@
 # Conductor
 
 ```
-***This is a modification of the popular navigation library designed 
-to support Android Lifecycle Components.***
+This is a modification of the popular navigation library designed 
+to support Android Lifecycle Components.
 ```
 ![alt text](https://github.com/edgar-zigis/Conductor/blob/master/sample.jpg?raw=true)
 
