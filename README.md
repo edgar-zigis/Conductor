@@ -1,9 +1,11 @@
 # Conductor
 
 ```
-This is a modification of the popular navigation library designed 
-to support Android Lifecycle Components.
+***This is a modification of the popular navigation library designed 
+to support Android Lifecycle Components.***
 ```
+![alt text](https://github.com/edgar-zigis/Conductor/blob/master/sample.jpg?raw=true)
+
 ### Differences
 
 * This fork fully supports Android Lifecycle Components and is up and running in the production of a few popular applications.
