@@ -20,7 +20,7 @@ public class ControllerLifecycleOwner implements LifecycleOwner {
 
         lifecycleController.addLifecycleListener(new LifecycleListener() {
             @Override
-            public void postContextAvailable(@NonNull Controller controller, @NonNull Context context) {
+            public void preCreateView(@NonNull Controller controller) {
                 lifecycleRegistry.handleLifecycleEvent(Event.ON_CREATE); // --> State.CREATED;
             }
 
@@ -36,24 +36,13 @@ public class ControllerLifecycleOwner implements LifecycleOwner {
 
             @Override
             public void preDetach(@NonNull Controller controller, @NonNull View view) {
-                lifecycleRegistry.handleLifecycleEvent(Event.ON_PAUSE); // --> State.STARTED;
+                lifecycleRegistry.handleLifecycleEvent(Event.ON_PAUSE); // --> State.PAUSED;
             }
 
             @Override
             public void preDestroyView(@NonNull Controller controller, @NonNull View view) {
-                lifecycleRegistry.handleLifecycleEvent(Event.ON_STOP); // --> State.CREATED;
-            }
-
-            @Override
-            public void preContextUnavailable(@NonNull Controller controller, @NonNull Context context) {
-                // do nothing
-            }
-
-            @Override
-            public void preDestroy(@NonNull Controller controller) {
                 lifecycleRegistry.handleLifecycleEvent(Event.ON_DESTROY); // --> State.DESTROYED;
             }
-
         });
     }
 
