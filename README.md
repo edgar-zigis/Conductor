@@ -10,12 +10,12 @@ to support Android Lifecycle Components.
 
 ```
 * This fork fully supports Android Lifecycle Components and is up and running in the production 
-of a few popular applications.
+  of a few popular applications.
 * In this version Lifecycleowner is bound to lifecycle of a view instead of the controller, 
-which fixes one of the most known Observer pitfalls - double subscription.
+  which fixes one of the most known Observer pitfalls - double subscription.
 * Unlike the original library, this fork correctly supports Google Maps.
 * Some critical bugs regarding Activity lifecycle were fixed (like host router nullablity issues, 
-lost backstack etc.)
+  lost backstack etc.)
 * This library version is lighter and legacy functionality like support of RxJava1 was removed.
 ```
 
