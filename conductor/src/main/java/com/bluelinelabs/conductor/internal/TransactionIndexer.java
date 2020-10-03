@@ -20,5 +20,4 @@ public class TransactionIndexer {
     public void restoreInstanceState(@NonNull Bundle savedInstanceState) {
         currentIndex = savedInstanceState.getInt(KEY_INDEX);
     }
-
 }

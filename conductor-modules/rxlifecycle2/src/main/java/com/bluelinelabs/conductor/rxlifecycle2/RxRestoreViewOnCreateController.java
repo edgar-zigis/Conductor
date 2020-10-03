@@ -11,6 +11,7 @@ import io.reactivex.Observable;
 import io.reactivex.subjects.BehaviorSubject;
 
 public abstract class RxRestoreViewOnCreateController extends RestoreViewOnCreateController implements LifecycleProvider<ControllerEvent> {
+
     private final BehaviorSubject<ControllerEvent> lifecycleSubject;
 
     public RxRestoreViewOnCreateController() {

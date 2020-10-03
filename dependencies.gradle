@@ -1,13 +1,13 @@
 ext {
     minSdkVersion = 16
-    compileSdkVersion = 28
-    targetSdkVersion = 28
+    compileSdkVersion = 30
+    targetSdkVersion = 30
     
     leakCanaryVersion = '1.5.4'
     rxJava2Version = '2.1.14'
     rxLifecycle2Version = '2.2.1'
     autodisposeVersion = '1.0.0'
-    archComponentsVersion = '2.0.0'
+    archComponentsVersion = '2.2.0'
     junitVersion = '4.12'
     roboelectricVersion = '3.8'
     lintVersion = '26.1.2'

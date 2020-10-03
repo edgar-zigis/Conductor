@@ -50,5 +50,4 @@ public class ControllerLifecycleOwner implements LifecycleOwner {
     public Lifecycle getLifecycle() {
         return lifecycleRegistry;
     }
-
 }

@@ -147,5 +147,4 @@ public class ViewAttachHandler implements OnAttachStateChangeListener {
             return lastChild;
         }
     }
-
 }

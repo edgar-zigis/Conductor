@@ -24,5 +24,4 @@ public abstract class LifecycleRestoreViewOnCreateController extends RestoreView
     public Lifecycle getLifecycle() {
         return mLifecycleOwner.getLifecycle();
     }
-
 }

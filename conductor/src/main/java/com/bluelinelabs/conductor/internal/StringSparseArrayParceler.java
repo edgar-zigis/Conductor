@@ -58,5 +58,4 @@ public class StringSparseArrayParceler implements Parcelable {
             return new StringSparseArrayParceler[size];
         }
     };
-
 }

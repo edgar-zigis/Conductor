@@ -89,5 +89,4 @@ public final class ControllerChangeHandlerIssueDetector extends Detector impleme
             }
         };
     }
-
 }

@@ -63,5 +63,4 @@ public class HorizontalChangeHandler extends AnimatorChangeHandler {
     public ControllerChangeHandler copy() {
         return new HorizontalChangeHandler(getAnimationDuration(), removesFromViewOnPush());
     }
-
 }

@@ -53,5 +53,4 @@ public class FadeChangeHandler extends AnimatorChangeHandler {
     public ControllerChangeHandler copy() {
         return new FadeChangeHandler(getAnimationDuration(), removesFromViewOnPush());
     }
-
 }

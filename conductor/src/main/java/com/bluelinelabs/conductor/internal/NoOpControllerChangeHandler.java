@@ -2,6 +2,7 @@ package com.bluelinelabs.conductor.internal;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
 import android.view.View;
 import android.view.ViewGroup;
 

@@ -251,5 +251,4 @@ class ControllerHostedRouter extends Router {
             return getRootRouter().getTransactionIndexer();
         }
     }
-
 }

@@ -55,5 +55,4 @@ public class VerticalChangeHandler extends AnimatorChangeHandler {
     public ControllerChangeHandler copy() {
         return new VerticalChangeHandler(getAnimationDuration(), removesFromViewOnPush());
     }
-
 }

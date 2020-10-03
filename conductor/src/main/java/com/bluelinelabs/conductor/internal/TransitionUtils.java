@@ -181,5 +181,4 @@ public class TransitionUtils {
         transitionSet.setOrdering(ordering);
         return transitionSet;
     }
-
 }

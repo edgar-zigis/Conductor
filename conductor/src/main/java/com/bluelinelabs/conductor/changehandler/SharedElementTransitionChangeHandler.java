@@ -650,5 +650,4 @@ public abstract class SharedElementTransitionChangeHandler extends TransitionCha
             this.parent = parent;
         }
     }
-
 }

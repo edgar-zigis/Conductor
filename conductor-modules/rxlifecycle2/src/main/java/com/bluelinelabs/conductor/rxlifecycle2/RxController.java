@@ -15,6 +15,7 @@ import io.reactivex.subjects.BehaviorSubject;
  * A base {@link Controller} that can be used to expose lifecycle events using RxJava
  */
 public abstract class RxController extends Controller implements LifecycleProvider<ControllerEvent> {
+
     private final BehaviorSubject<ControllerEvent> lifecycleSubject;
 
     public RxController(){

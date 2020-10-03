@@ -979,5 +979,4 @@ public abstract class Router {
     @NonNull abstract List<Router> getSiblingRouters();
     @NonNull abstract Router getRootRouter();
     @NonNull abstract TransactionIndexer getTransactionIndexer();
-
 }

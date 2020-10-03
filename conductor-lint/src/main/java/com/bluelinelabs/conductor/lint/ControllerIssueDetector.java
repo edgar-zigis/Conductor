@@ -100,5 +100,4 @@ public final class ControllerIssueDetector extends Detector implements Detector.
             }
         };
     }
-    
 }

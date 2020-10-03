@@ -28,5 +28,4 @@ public class ClassUtils {
             throw new RuntimeException("An exception occurred while creating a new instance of " + className + ". " + e.getMessage());
         }
     }
-
 }

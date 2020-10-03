@@ -149,5 +149,4 @@ public abstract class TransitionChangeHandler extends ControllerChangeHandler {
             container.addView(to);
         }
     }
-
 }

@@ -52,5 +52,4 @@ public class ChangeHandlerFrameLayout extends FrameLayout implements ControllerC
     public void onChangeCompleted(@Nullable Controller to, @Nullable Controller from, boolean isPush, @NonNull ViewGroup container, @NonNull ControllerChangeHandler handler) {
         inProgressTransactionCount--;
     }
-
 }

@@ -10,6 +10,7 @@ import com.trello.rxlifecycle2.OutsideLifecycleException;
 import io.reactivex.subjects.BehaviorSubject;
 
 public class ControllerLifecycleSubjectHelper {
+
     private ControllerLifecycleSubjectHelper() {
     }
 

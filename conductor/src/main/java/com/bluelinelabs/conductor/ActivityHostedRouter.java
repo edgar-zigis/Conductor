@@ -136,5 +136,4 @@ public class ActivityHostedRouter extends Router {
     public void onContextAvailable() {
         super.onContextAvailable();
     }
-
 }

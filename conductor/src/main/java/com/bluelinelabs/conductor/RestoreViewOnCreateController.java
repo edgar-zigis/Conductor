@@ -49,5 +49,4 @@ abstract public class RestoreViewOnCreateController extends Controller {
      */
     @NonNull
     protected abstract View onCreateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container, @Nullable Bundle savedViewState);
-
 }

@@ -253,5 +253,4 @@ public abstract class AnimatorChangeHandler extends ControllerChangeHandler {
         }
 
     }
-
 }
