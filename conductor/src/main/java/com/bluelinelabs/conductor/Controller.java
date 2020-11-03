@@ -926,7 +926,9 @@ public abstract class Controller {
         for (ControllerHostedRouter childRouter : childRouters) {
             for (RouterTransaction childTransaction : childRouter.backstack) {
                 if (childTransaction.controller.awaitingParentAttach) {
-                    childTransaction.controller.attach(childTransaction.controller.view);
+                    if (childTransaction.controller.view != null) {
+                        childTransaction.controller.attach(childTransaction.controller.view);
+                    }
                 }
             }
         }
