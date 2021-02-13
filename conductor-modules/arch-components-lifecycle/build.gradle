@@ -26,4 +26,4 @@ dependencies {
     implementation project(':conductor')
 }
 
-ext.artifactId = 'conductor-arch-components-lifecycle'
+ext.artifactId = 'conductor-archlifecycle'
